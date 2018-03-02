@@ -54,4 +54,13 @@ The template root requires exactly one element  vue/valid-template-root //报错
 
 ```
 2. 使用SCSS
+  1. 安装依赖包 node-sass、sass-loader
+  2. 相应的组件中，修改代码如下：
+  ```
+<style lang="scss" scoped>
 
+...
+
+</style>
+  ```
+  即可，在该组件编辑SCSS代码。其中，scoped 是设置<style></style>中编辑的样式只会影响该组件的样式。
