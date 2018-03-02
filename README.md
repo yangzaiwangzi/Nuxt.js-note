@@ -6,7 +6,7 @@
 
 ### 项目的搭建
 1. 如果 vue-cli 没有安装, 需先通过 npm install -g vue-cli 来安装；
-2. 打开cmd，输入一下命令行，一次一回车，‘<project-name>’是你项目的名称
+2. 打开cmd，输入一下命令行，一次一回车， <project-name> 是你项目的名称
 ```
 vue init nuxt-community/starter-template <project-name>
 
@@ -30,4 +30,25 @@ npm run dev
     }
   },
 ```
-host配置自己本地IP，如此，则可以使用 192.168.xx.xxx:3332 在浏览器代开项目。
+host配置自己本地IP，如此，则可以使用 192.168.xx.xxx:3332 在浏览器打开项目。
+
+### 开始项目
+1. 路由
+> Nuxt.js 依据 pages 目录结构自动生成 vue-router 模块的路由配置。
+打开pages文件夹，修改里面的index.vue文件，这个文件就是你的项目首页。  
+注意的问题：
+- <template></template>标签中只能存在一个子节点，否则会报错：
+```
+The template root requires exactly one element  vue/valid-template-root //报错信息
+
+//错误代码：
+<template>
+  <section></section>
+  <section></section>
+</template>
+//代码修改
+<template>
+  <section></section> 
+</template>
+
+```
