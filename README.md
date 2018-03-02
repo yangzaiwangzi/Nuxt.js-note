@@ -46,9 +46,12 @@ The template root requires exactly one element  vue/valid-template-root //报错
   <section></section>
   <section></section>
 </template>
+
 //代码修改
 <template>
   <section></section> 
 </template>
 
 ```
+2. 使用SCSS
+
