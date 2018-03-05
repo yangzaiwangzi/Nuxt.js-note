@@ -66,5 +66,32 @@ The template root requires exactly one element  vue/valid-template-root //报错
     即可，在该组件编辑SCSS代码。其中，scoped 是设置<style></style>中编辑的样式只会影响该组件的样式。  
 3.移动端， 使用px自动转换rem  
   这次没有内置scss处理px自动转化rem，习惯使用插件cssrem-master，具体移驾:[cssrem](https://github.com/flashlizi/cssrem).
-    1. 引入flexible.js
-        - 引入方法：
+      1. 引入flexible.js
+        - 引入方法一：每个组件页面添加如下代码，该方法则是每个组件页面都要加上这段代码，故不推荐。
+       ```
+        <script> 
+  export default {
+    head(){
+      return{
+        script: [
+          { src: 'flexible.js' }
+        ] 
+      }
+    } 
+  }
+</script>
+        ```
+        - 引入方法二：使用NuxtJs提供的使用[组件Api](https://nuxtjs.org/guide/plugins)，相关步骤如下：
+        ```
+        //1、安装依赖包，教程链接【https://www.npmjs.com/package/flexible.js】，不多说。本人将该包代码结合flexible.js 做了一定的修改，方便自己使用，需要的可以Issues 我。
+        //2、nuxt.config.js 添加代码
+          plugins: [
+    { src: '~/plugins/flexible.js', ssr: false }
+  ]
+        //2、plugins文件夹添加文件flexible.js，并添加如下代码：
+        import Vue from 'vue'
+import flexible from 'flexible.js'
+
+Vue.use(flexible);
+        ```
+ 4. 
