@@ -64,4 +64,7 @@ The template root requires exactly one element  vue/valid-template-root //报错
 </style>
   ```
     即可，在该组件编辑SCSS代码。其中，scoped 是设置<style></style>中编辑的样式只会影响该组件的样式。  
-3.移动端， 使用px自动转换rem
+3.移动端， 使用px自动转换rem  
+  这次没有内置scss处理px自动转化rem，习惯使用插件cssrem-master，具体移驾:[cssrem](https://github.com/flashlizi/cssrem).
+    1. 引入flexible.js
+        - 引入方法：
