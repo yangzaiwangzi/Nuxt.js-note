@@ -33,7 +33,7 @@ npm run dev
 host配置自己本地IP，如此，则可以使用 192.168.xx.xxx:3332 在浏览器打开项目。
 
 ### 开始项目
-1. 路由
+#### 1. 路由
 > Nuxt.js 依据 pages 目录结构自动生成 vue-router 模块的路由配置。
 打开pages文件夹，修改里面的index.vue文件，这个文件就是你的项目首页。  
 注意的问题：
@@ -53,7 +53,7 @@ The template root requires exactly one element  vue/valid-template-root //报错
 </template>
 
 ```
-2. 使用SCSS
+#### 2. 使用SCSS
     1. 安装依赖包 node-sass、sass-loader  
     2. 相应的组件中，修改代码如下：  
   ```
@@ -64,7 +64,7 @@ The template root requires exactly one element  vue/valid-template-root //报错
 </style>
   ```
     即可，在该组件编辑SCSS代码。其中，scoped 是设置<style></style>中编辑的样式只会影响该组件的样式。  
-3.移动端， 使用px自动转换rem  
+#### 3.移动端， 使用px自动转换rem  
   这次没有内置scss处理px自动转化rem，习惯使用插件cssrem-master，具体移驾:[cssrem](https://github.com/flashlizi/cssrem).
 - 引入flexible.js  
  1. 引入方法一：每个组件页面添加如下代码，该方法则是每个组件页面都要加上这段代码，故不推荐。
@@ -95,5 +95,5 @@ import flexible from 'flexible.js'
 
 Vue.use(flexible); 
  ```
-搭配好插件cssrem-master，即可
- 4. 
+搭配好插件cssrem-master，即可  
+#### 4. 
