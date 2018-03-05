@@ -53,7 +53,7 @@ The template root requires exactly one element  vue/valid-template-root //报错
 </template>
 
 ```
-2. 使用SCSS
+2. 使用SCSS  
   1. 安装依赖包 node-sass、sass-loader  
   2. 相应的组件中，修改代码如下：  
   ```
