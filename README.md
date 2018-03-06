@@ -84,16 +84,16 @@ The template root requires exactly one element  vue/valid-template-root //报错
     
 2. 引入方法二：使用NuxtJs提供的使用[组件Api](https://nuxtjs.org/guide/plugins)，相关步骤如下：
  ```
-        //1、安装依赖包，教程链接【https://www.npmjs.com/package/flexible.js】，不多说。本人将该包代码结合flexible.js 做了一定的修改，方便自己使用，需要的可以Issues 我。
-        //2、nuxt.config.js 添加代码
-          plugins: [
+ //1、安装依赖包，教程链接【https://www.npmjs.com/package/flexible.js】，不多说。本人将该包代码结合flexible.js 做了一定的修改，方便自己使用，需要的可以Issues 我。
+ //2、nuxt.config.js 添加代码
+  plugins: [
     { src: '~/plugins/flexible.js', ssr: false }
   ]
-        //2、plugins文件夹添加文件flexible.js，并添加如下代码：
-        import Vue from 'vue'
-import flexible from 'flexible.js'
+//2、plugins文件夹添加文件flexible.js，并添加如下代码：
+ import Vue from 'vue'
+ import flexible from 'flexible.js'
 
-Vue.use(flexible); 
+ Vue.use(flexible); 
  ```
 搭配好插件cssrem-master，即可  
 #### 4. 
