@@ -96,4 +96,5 @@ The template root requires exactly one element  vue/valid-template-root //报错
  Vue.use(flexible); 
  ```
 搭配好插件cssrem-master，即可  
-#### 4. 
+#### 4. loading...
+项目基本可以开发了...,我先开发项目，遇到新内容会回来继续更新...
