@@ -96,5 +96,28 @@ The template root requires exactly one element  vue/valid-template-root //报错
  Vue.use(flexible); 
  ```
 搭配好插件cssrem-master，即可  
-#### 4. loading...
-项目基本可以开发了...,我先开发项目，遇到新内容会回来继续更新...
+#### 4.asyncData 方法
+asyncData方法会在组件（**限于页面组件**）每次加载之前被调用。<br>
+它可以在服务端或路由更新之前被调用。<br>
+在这个方法被调用的时候，第一个参数被设定为当前页面的上下文对象，你可以利用 asyncData方法来获取数据，Nuxt.js 会将 asyncData 返回的数据融合组件 data 方法返回的数据一并返回给当前组件。<br>
+这个方法也是nuxt实现SSR的关键一步。
+#### 5.assets文件夹
+默认情况下 Nuxt 使用 vue-loader、file-loader 以及 url-loader 这几个 Webpack 加载器来处理文件的加载和引用。<br>
+对于不需要通过 Webpack 处理的静态资源文件，可以放置在 static 目录中。<br>
+url-loader 能根据你指定的文件大小阈值，来判断一个文件是转换成内联的base-64码（如果该文件尺寸小于该阈值）还是使用file-loader来降级处理。小文件base-64化能有效减少HTTP请求数。也即文件（图片或字体）的尺寸小于1K（配置可修改）的时候，它将会被转换成 Base-64 data URL 来内联引用；
+#### 常用命令
+nuxt：	启动一个热加载的Web服务器（开发模式）。<br>
+nuxt build：	利用webpack编译应用，压缩JS和CSS资源（发布用）。<br>
+nuxt start：	以生成模式启动一个Web服务器 (nuxt build 会先被执行)。<br>
+nuxt generate：	编译应用，并依据路由配置生成对应的HTML文件 (用于静态站点的部署)。<br>
+Nuxt.js 提供了两种发布部署应用的方式：服务端渲染应用部署 和 静态应用部署。<br>
+服务端渲染应用部署<br>
+```javascript
+nuxt build 
+nuxt start 
+```
+
+静态应用部署
+```javascript
+npm run generate
+```
